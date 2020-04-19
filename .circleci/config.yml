@@ -58,7 +58,7 @@ jobs:
       - *save_cache_repo
 
       - *restore_cache_node_modules
-      - run: yarn
+      - run: npm install
       - *save_cache_node_modules
 
       - *persist_workspace
@@ -69,7 +69,7 @@ jobs:
       - *attach_workspace
       - run:
           name: "Build"
-          command: yarn build
+          command: npm run build
       - *persist_workspace
 
   test_lint:
@@ -78,7 +78,7 @@ jobs:
       - *attach_workspace
       - run:
           name: "Test Lint"
-          command: yarn lint
+          command: npm run lint
 
   test_jest:
     <<: *container_settings
@@ -86,7 +86,7 @@ jobs:
       - *attach_workspace
       - run:
           name: "Test Jest"
-          command: yarn test
+          command: npm run test
       - store_artifacts:
           path: coverage
           destination: coverage
@@ -96,7 +96,7 @@ jobs:
       - *attach_workspace
       - run:
           name: "Semantic release"
-          command: yarn run semantic-release
+          command: npm run semantic-release
 
 workflows:
   version: 2

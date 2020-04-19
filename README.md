@@ -25,6 +25,7 @@ mv react-component-livrary-starter my-react-component
 cd my-react-component
 rm -rf .git
 git init
+npm install
 ```
 
 Then Rename project name, description, homepage, bugs, repository links in `package.json` and 
