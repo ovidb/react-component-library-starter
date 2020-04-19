@@ -1,6 +1,6 @@
 {
   "name": "@ovidb/react-component-library-starter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A React Component library starter",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
